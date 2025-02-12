@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+.left {
+  width: 25vw;
+  padding: 4px;
+  background-color: rgb(3, 3, 3);
+}
+.right {
+  max-height: 92vh;
+  width: 75vw; /* Fixed height */
+  overflow: scroll; /* Enables vertical scrolling */
+  scroll-behavior: smooth;
+  background-color: rgb(248, 244, 244);
+}
+.right::-webkit-scrollbar {
+    display: none;
+}
+
+.home ul li {
+  width: 15px;
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  padding-top: 13px;
+  padding-left:7px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: black;
+}
+.logo img {
+  margin-right: 5px;
+}
+.heading img {
+  height: 25px;
+  width: 25px;
+
+}
+.heading{
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+.footer a {
+  color: gray;
+}
+.footer {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5px;
+  flex-wrap: wrap;
+  gap: 5px;
+  
+  
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(4, 3, 3);
+  padding: 8px;
+  position: fixed;
+  z-index: 2000;
+  width: 73.5%;
+}
+
+.nav li {
+  list-style: none;
+  display: inline;
+}
+
+.nav img {
+  width: 10px;
+  padding-top: 6px;
+  margin-right: 5px;
+  margin-left: 20px;
+  position: sticky;
+}
+.nav img:hover {
+  transform: scale(1.2);
+}
+.header button {
+  padding: 8px 16px; /* Space inside the button */
+  font-size: 14px; /* Font size */
+  font-weight: 650; /* Bold text */
+  border: none; /* Removes border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.1s ease;
+  /* Smooth hover effect */
+}
+#signup-btn {
+  background-color: #080808; /* Blue background */
+  color: gray; /* White text */
+}
+
+#login-btn:hover {
+  /* transform: translateY(-3px);     Slight upward movement */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transform: scale(1.05);
+}
+#signup-btn:hover {
+  /* transform: translateY(-3px);     Slight upward movement */
+  /* Add shadow */
+  transform: scale(1.05);
+  color: white;
+}
+
+.playlist {
+  padding: 20px;
+}
+.playlist-container {
+  width: 170px;
+  padding: 8px 8px 8px 8px;
+  position: relative;
+}
+.playlist-container:hover {
+  background-color: #282626;
+}
+.playlist-contents {
+  width: 95%;
+  display: table-cell;
+}
+.playlist-contents img {
+  object-fit: contain;
+  width: 100%;
+}
+.p-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.playlist-container:hover {
+  .playbtn {
+    opacity: 1;
+    transition: all 0.4s ease;
+    transform: translateY(-9px); /* Slight upward movement */
+  }
+}
+
+.playbtn {
+  /* display: none; */
+  background-color: #3be477;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: 2px solid rgb(238, 237, 237);
+  position: absolute;
+  top: 60%;
+  right: 9%;
+  opacity: 0;
+}
+/*//////////////////////////// Right footer section ////////////////////*/
+
+.right-footer {
+  background-color: #0c0c0c;
+  width: 75vw;
+  color: rgb(250, 248, 248);
+  position: fixed;
+  bottom: 0%;
+  height: 10vh;
+}
+.player ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+.player ul li img {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+}
+.player ul li img:hover {
+  transform: scale(1.1);
+}
+
+/*  song list section */
+
+.songList{
+  height: 63vh;
+  overflow: scroll;
+  cursor: pointer;
+  margin-top: 5px;
+  
+}
+
+.songList li{
+  display: flex;
+  border: 1px solid white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  margin: 5px;
+  border-radius: 10px;
+
+
+}
+.songList::-webkit-scrollbar{
+  display: none;
+}
+.songList .info{
+ font-size: small;
+ width: 300px;
+ height: 30px;
+
+}
+
+.playnow{
+  display: flex;
+  align-items: center;
+  font-size: small;
+
+}
+.playnow span{
+ width: 30px;
+}
+.play-now{
+  height: 25px;
+  width: 25px;
+}
+.music{
+  height: 25px;
+  width: 25px;
+  
+}
+/*seek bar*'''/////////////////*/
+.seekbar{
+  position: absolute;
+  top: 2px;
+  height: 2px;
+  width: 100%;
+  background-color: #3be477;
+  cursor: pointer;
+}
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(224, 240, 220);
+  position: relative;
+  bottom: 4px;
+  left: 0%;
+  cursor: pointer;
+}
+#previous{
+  cursor: pointer;
+}
+#play{
+  cursor: pointer;
+  
+}
+#next{
+  cursor: pointer;
+}
