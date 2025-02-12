@@ -23,6 +23,8 @@ const playMusic = (track)=>{
   currentSong.src = "/songs/" + track
   currentSong.play();
   play.src = "logos/pause.svg"
+  document.querySelector(".songinfo").innerHTML = track
+   document.querySelector(".songtime").innerHTML = "00:00/00:00"
 }
 
 
